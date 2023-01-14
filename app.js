@@ -13,7 +13,6 @@ app.use(router)
 app.get('/health', (req, res) => {
   res.send('ok')
 })
-app.use()
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
