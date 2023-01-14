@@ -1,5 +1,6 @@
 const express = require('express')
-const router = require('express').Router
+const healthRouter = require('./controllers/health')
+
 const app = express()
 require('dotenv').config()
 
@@ -9,10 +10,8 @@ const PORT = process.env.PORT || 8080
 
 
 app.use(express.static('dist'))
-app.use(router)
-app.get('/health', (req, res) => {
-  res.send('ok')
-})
+app.use(healthRouter)
+
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
