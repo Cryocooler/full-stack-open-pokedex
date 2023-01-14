@@ -4,5 +4,4 @@ router.get('/health', (req, res) => {
   res.send('ok')
 })
 
-
-module.exports = router
+export default router
